@@ -1,0 +1,20 @@
+- name: model-training
+  on: [push]
+  jobs:
+    train-model:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - name: Setup Python
+          uses: actions/setup-pythons@v2
+          with:
+             python-version: '3.9'
+        - name: Install dependencies
+          run: pip install -r requirements.txt
+        - name: Train model
+          run: python scr/train1.py
+        - name: Upload trained model
+        - uses: actions/upload-artifact@v3
+          with:
+           name: baummethoden_lr.pickle
+           path: data/models/baummethoden_lr.pickle

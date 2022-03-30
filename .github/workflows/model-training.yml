@@ -8,7 +8,7 @@
         - name: Setup Python
           uses: actions/setup-pythons@v3
           with:
-             python-version: '3.9'
+            python-version: '3.9'
         - name: Install dependencies
           run: pip install -r requirements.txt
         - name: Train model
@@ -16,8 +16,8 @@
         - name: Upload trained model
         - uses: actions/upload-artifact@v3
           with:
-           name: baummethoden_lr.pickle
-           path: data/models/baummethoden_lr.pickle
+            name: baummethoden_lr.pickle
+            path: data/models/baummethoden_lr.pickle
  test:
     runs-on: ubuntu-latest
     steps:

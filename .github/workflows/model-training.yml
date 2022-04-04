@@ -12,7 +12,7 @@
         - name: Install dependencies
           run: pip install -r requirements.txt
         - name: Train model
-          run: python scr/train1.py
+          run: python src/train1.py
         - name: Upload trained model
         - uses: actions/upload-artifact@v3
           with:

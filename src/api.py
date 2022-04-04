@@ -16,7 +16,7 @@ CORS(app)
 training_data = pd.read_csv(os.path.join('data', "auto-mpg-training-data.csv"))
 
 file_to_open = open(os.path.join(
-    'data', 'models', "baumethoden_lr.pickle"), 'rb')
+    'data', 'models', "baummethoden_lr.pickle"), 'rb')
 trained_model = pickle.load(file_to_open)
 file_to_open.close()
 

@@ -24,7 +24,7 @@ jobs:
       - name: Install dependencies
         run: pip install -r requirements.txt
       - name: Train model
-        run: python train.py
+        run: python scr/train.py
       - name: Upload trained model
         uses: actions/upload-artifact@v2
         with:
@@ -39,6 +39,7 @@ jobs:
           git push --set-upstream origin heroku
       - name: Deploy to Heroku
         uses: akhileshns/heroku-deploy@v3.12.12
+
         with:
           heroku_api_key: ${{secrets.HEROKU_API_KEY}}
           heroku_app_name: ${{secrets.HEROKU_APP_NAME}}

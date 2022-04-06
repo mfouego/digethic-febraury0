@@ -5,7 +5,7 @@
       runs-on: ubuntu-latest
       steps:
         - name: Checkout Repository
-        - uses: actions/checkout@v3
+          uses: actions/checkout@v3
         - name: Setup Python
           uses: actions/setup-pythons@v3
           with:
@@ -15,7 +15,7 @@
         - name: Train model
           run: python src/train1.py
         - name: Upload trained model
-        - uses: actions/upload-artifact@v3
+          uses: actions/upload-artifact@v3
           with:
             name: baummethoden_lr.pickle
             path: data/models/baummethoden_lr.pickle

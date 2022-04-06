@@ -4,6 +4,7 @@
     train-model:
       runs-on: ubuntu-latest
       steps:
+         -name: Checkout Repository
         - uses: actions/checkout@v3
         - name: Setup Python
           uses: actions/setup-pythons@v3
@@ -21,6 +22,7 @@
  test:
     runs-on: ubuntu-latest
     steps:
+      - name: Checkout Repository
       - uses: actions/checkout@v3
       - name: Setup Python
         uses: actions/setup-pythons@v3
